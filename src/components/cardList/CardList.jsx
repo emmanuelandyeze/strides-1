@@ -6,11 +6,13 @@ import Card from "../card/Card";
 
 const getData = async (page, cat) => {
   const res = await fetch(
-    `https://thestrides.com.ng/api/posts?page=${page}&cat=${cat || ""}`,
-    {
-      cache: "no-store",
-    }
-  );
+		`http://127.0.0.1:3000/api/posts?page=${page}&cat=${
+			cat || ''
+		}`,
+		{
+			cache: 'no-store',
+		},
+	);
 
   if (!res.ok) {
     throw new Error("Failed");
